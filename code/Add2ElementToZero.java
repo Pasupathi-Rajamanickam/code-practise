@@ -1,3 +1,9 @@
+/* 
+IDEA: 
+1. Find the first positive index, no need to add negative + negative and waste index travalling
+2. When adding positive with negative break the loop if the value is more than 0, remaining also will go for > 0
+*/
+
 public static void main(String... s) {
     int[] array = new int[] { -15, -14, -13, -2, -1, 2, 3, 4, 5, 6, 12, 43, 53, 66 };
 
@@ -25,6 +31,7 @@ public static void main(String... s) {
                 System.out.println(i + " " + j);
                 break;
             } else if (total > 0) {
+                // 2. When adding positive with negative break the loop if the value is more than 0, remaining also will go for > 0
                 break;
             }
         }
